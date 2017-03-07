@@ -6,14 +6,9 @@ def roulez_jeunesse():
     moteur_large_gauche.run_forever()
     moteur_large_droit.run_forever()
 
-def nah():
-    Sound.speak("Nah !")
-    moteur_large_gauche.run_to_rel_pos(position_sp=45, speed_sp=350, stop_action="brake")
-    moteur_large_droit.run_to_rel_pos(position_sp=-45, speed_sp=350, stop_action="brake")
-
 def alte():
     Sound.speak("oh !")
-    moteur_large_gauche.stop()
+    moteur_large_gauche.stop()=
     moteur_large_droit.stop()
 
 moteur_large_gauche = LargeMotor('outB')
@@ -22,7 +17,6 @@ moteur_large_droit = LargeMotor('outC')
 infrarouge = InfraredSensor()
 infra.mode('IR-PROX')
 
-
 while True:
     Sound.speak("ALLÉÉÉ !")
     roulez_jeunesse()
@@ -30,5 +24,4 @@ while True:
 
     if distance <= 30:
         alte()
-        nah()
-        roulez_jeunesse()
+        break
