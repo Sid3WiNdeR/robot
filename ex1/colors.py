@@ -2,7 +2,6 @@ import ev3dev.ev3 as ev3
 from ev3dev.ev3 import *
 
 
-
 color_sensor = ev3.ColorSensor()
 color_sensor.mode = 'COL-COLOR'
 
