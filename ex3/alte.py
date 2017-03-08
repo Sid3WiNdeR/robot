@@ -15,12 +15,12 @@ moteur_large_gauche = LargeMotor('outB')
 moteur_large_droit = LargeMotor('outC')
 
 infrarouge = InfraredSensor()
-infra.mode('IR-PROX')
+infrarouge.mode('IR-PROX')
 
+Sound.speak("ALLÉÉÉ !")
 while True:
-    Sound.speak("ALLÉÉÉ !")
     roulez_jeunesse()
-    distance = infra.value()
+    distance = infrarouge.value()
 
     if distance <= 30:
         alte()
